@@ -158,7 +158,7 @@ class WebEnumGUI:
 
         except StopIteration:
             self.run_post_scan_modules()
-
+#
     # ---------- POST-SCAN MODULES ----------
     def run_post_scan_modules(self):
         # Fingerprinting
@@ -176,6 +176,7 @@ class WebEnumGUI:
                 self.dir_tab.insert(tk.END, f"{path} → HTTP {code}\n")
 
         # Vulnerability Detection
+
         self.vuln_tab.insert(tk.END, "[+] Vulnerability Detection (Safe Mode)\n\n")
         self.vuln_tab.insert(tk.END, self.vuln.detect_sqli(self.url) + "\n")
         self.vuln_tab.insert(tk.END, self.vuln.detect_xss(self.url) + "\n")
@@ -184,3 +185,8 @@ class WebEnumGUI:
         self.storage.save(self.discovered)
 
         self.status.config(text="Status: Scan Completed")
+
+
+
+
+#just 
